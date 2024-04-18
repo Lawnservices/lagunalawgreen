@@ -11,12 +11,24 @@ var time = 2000;
 function cambiarImagenes(){
   document.slider.src = imagenes[indiceImagenes];
 
-if(indiceImagenes < 6){
+if(indiceImagenes < 5){
   indiceImagenes++;
 }  else{
     indiceImagenes = 0;
   }
 }
-setInterval(cambiarImagenes,time)
- ;
+setInterval(cambiarImagenes,time);
+
+document.getElementById('video').addEventListener('click',function(){
+  document.getElementById('video').style.display = 'none';
+  document.getElementById('videos').style.display = 'block';
+  document.getElementById('slider').style.display = 'none';
+  document.getElementById('videoo').style.display = 'block';
+});
+this.document.getElementById('videoo').addEventListener('click',function(){
+  document.getElementById('video').style.display = 'block';
+  document.getElementById('videoo').style.display = 'none';
+  document.getElementById('videos').style.display = 'none';
+  document.getElementById('slider').style.display = 'block';
+});
 });
